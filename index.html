@@ -49,10 +49,13 @@
       margin-top: 15px;
       font-weight: bold;
     }
-    #walletBalance {
+    #walletBalance, #tokenName, #transactionHistory {
       margin-top: 10px;
       font-size: 14px;
       color: #444;
+    }
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -61,6 +64,7 @@
     <h2>🔥 ALPE Token Burn Tool</h2>
     <button onclick="connectMetaMask()">🔗 MetaMask verbinden</button>
     <div id="walletBalance"></div>
+    <div id="tokenName"></div>
 
     <label for="tokenAddress">Token-Adresse:</label>
     <input type="text" id="tokenAddress" value="0x15b9F9Bf3A46a7B847f0E0702E51D239b278413a">
@@ -71,6 +75,10 @@
     <button onclick="burnTokens()">🔥 Burn ausführen</button>
 
     <p id="status"></p>
+    <div id="transactionHistory">
+      <h4>Letzte Aktionen:</h4>
+      <ul id="txList"></ul>
+    </div>
   </div>
 
   <script>
@@ -82,6 +90,8 @@
       "function decimals() view returns (uint8)",
       "function name() view returns (string)"
     ];
+
+    const txHistory = [];
 
     async function connectMetaMask() {
       if (window.ethereum) {
@@ -105,7 +115,8 @@
       const rawBalance = await contract.balanceOf(address);
       const tokenName = await contract.name();
       const balance = ethers.utils.formatUnits(rawBalance, decimals);
-      document.getElementById("walletBalance").innerText = `📦 ${tokenName} Balance: ${balance}`;
+      document.getElementById("walletBalance").innerText = `📦 Balance: ${balance}`;
+      document.getElementById("tokenName").innerText = `Token: ${tokenName}`;
     }
 
     async function burnTokens() {
@@ -121,9 +132,17 @@
         await tx.wait();
         document.getElementById("status").innerText = "✅ Erfolgreich geburned!";
         await showBalance();
+        addTransaction(amount);
       } catch (err) {
         document.getElementById("status").innerText = "❌ Fehler beim Burn: " + err.message;
       }
+    }
+
+    function addTransaction(amount) {
+      const time = new Date().toLocaleTimeString();
+      txHistory.unshift(`${time}: 🔥 ${amount} ALPE geburned`);
+      if (txHistory.length > 5) txHistory.pop();
+      document.getElementById("txList").innerHTML = txHistory.map(t => `<li>${t}</li>`).join("");
     }
   </script>
 </body>
