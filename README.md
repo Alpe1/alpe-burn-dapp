@@ -38,7 +38,7 @@ Beispieladresse:
 
 🌐 GitHub Pages (Live-Ansicht)
 
-👉 Zur Live-DApp
+👉 Zur Live-DApp https://alpe1.github.io/alpe-burn-dapp/
 
 🔒 Sicherheitshinweis
 
