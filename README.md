@@ -1,55 +1,92 @@
-🔥 ALPE Token Burn Tool
+✨ ALPE Token Test DApp
 
-Willkommen beim offiziellen ALPE Token Burn Tool!
+Dies ist eine Testversion der offiziellen ALPE DApp, mit der Benutzer auf einfache Weise die wichtigsten Funktionen des ALPE Tokens im Testnetz (Sepolia) ausprobieren können. Die App richtet sich an Tester, Entwickler und Interessierte.
 
-Mit diesem Tool können ALPE-Token (basierend auf dem ERC20-Standard mit Burn-Funktion) sicher und transparent aus deiner Wallet entfernt („verbrannt“) werden. Die Anwendung basiert auf JavaScript, HTML und der ethers.js Bibliothek und nutzt MetaMask zur Interaktion mit der Blockchain.
+⚡ Features (Testbar)
 
-🚀 Funktionen
+🔗 MetaMask-Verbindung
 
-🔗 Verbindung mit MetaMask
+💳 ALPE-Token Balance anzeigen
 
-📆 Anzeige des Token-Namens und Wallet-Guthabens
+🔄 ALPE an eine andere Adresse senden (Transfer)
 
-🔥 Ausführung von Burn-Transaktionen für ALPE
+🔥 ALPE-Token verbrennen (Burn-Funktion)
 
-📜 Anzeige der letzten 5 Burn-Aktionen in der Sitzung
+🌟 Test-Airdrop ("Claim ALPE")
 
-⚙️ Voraussetzungen
+🔢 Transaktionsstatus anzeigen (lokal oder via Tenderly)
 
-Eine installierte MetaMask Wallet
+🔧 Voraussetzungen
 
-Test- oder Mainnet mit einem Token, der burn(uint256) unterstützt
+✨ Eine installierte MetaMask Wallet
 
-Token-Adresse mit aktivierter burn()-Funktion
+🔺 Verbunden mit dem Sepolia-Testnetz
+
+🌐 Ein paar Test-ALPE (z. B. durch Airdrop-Button)
 
 📂 Dateien
 
-index.html – enthält die vollständige DApp (Frontend + Web3-Logik)
+index.html – Vollständige App (Frontend + Web3-Interaktion)
 
-README.md – diese Projektbeschreibung
+README.md – Projektbeschreibung und Anleitung
 
-🧪 Testnet
+📊 Token-Details (Test)
 
-Dieses Tool wurde im Sepolia-Testnetz mit dem Token ALPE getestet.
+Eigenschaft
 
-Beispieladresse:
+Wert
 
-0x15b9F9Bf3A46a7B847f0E0702E51D239b278413a
+Name
 
-🌐 GitHub Pages (Live-Ansicht)
+AlpenCoin (Test)
 
-👉 Zur Live-DApp https://alpe1.github.io/alpe-burn-dapp/
+Symbol
 
-🔒 Sicherheitshinweis
+ALPE
 
-Bitte prüfe immer die Token-Adresse, bevor du Token burnst. Der Code verwendet die direkte Eingabe ohne Validierung.
+Adresse
 
-🤝 Mitwirkende
+0xed1EAb121847fcc90F2cb4aC047eC422aE940C80
 
-Alex (Alpe1) – Idee, Entwicklung, Testing
+Netzwerk
 
-Unterstützt durch Community-Feedback und Tenderly Simulation
+Sepolia
 
-📜 Lizenz
+🚀 Live-Test
 
-MIT License – frei zur Nutzung, Änderung & Weitergabe.
+GitHub Pages – DApp starten
+
+🚧 Sicherheit (Testbetrieb)
+
+Diese DApp verwendet bewusst keine Validierung oder Zugangskontrollen.
+
+Bitte nur im Testnetzwerk verwenden, nicht für echte Token.
+
+Alle Funktionen sind auf burn, transfer, mint und balanceOf beschränkt.
+
+👨‍💻 Team & Tester
+
+Alex (Alpe1) – Idee, Code, Koordination
+
+Peter – Co-Idee, Kommunikation
+
+Tester:innen – (optional namentlich eintragbar)
+
+🔃 Ausblick
+
+In der finalen Version der ALPE-DApp wird es u. a. geben:
+
+Staking-Modul
+
+Community-Login
+
+Wallet-Dashboard
+
+Anbindung an den Night-Mode Token
+
+🌐 Lizenz
+
+MIT License
+
+Letzte Aktualisierung: 26.05.2025
+
