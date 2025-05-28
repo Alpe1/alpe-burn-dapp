@@ -38,7 +38,7 @@ Wert
 
 Name
 
-AlpenCoin (Test)
+AlpeCoin (Test)
 
 Symbol
 
